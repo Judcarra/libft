@@ -65,3 +65,32 @@
 //    printf("arr2: %s\n", arr2);
 //    return (0);
 //}
+
+int main()
+{
+    //Copia sin solapamiento
+    char str1[] = "Hello, World!";
+    printf("Antes de memmove (sin solapamiento): %s\n", str1);
+    memmove(str1 + 7, str1, 6);  
+    printf("Después de memmove: %s\n\n", str1);
+
+    //Copia con solapamiento, destino después de origen
+    char str2[] = "Hello, World!";
+    printf("Antes de memmove (solapamiento, destino después): %s\n", str2);
+    memmove(str2 + 7, str2, 6); 
+    printf("Después de memmove: %s\n\n", str2);
+
+    //Copia con solapamiento, destino dentro del origen
+    char str3[] = "Hello, World!";
+    printf("Antes de memmove (solapamiento, destino dentro): %s\n", str3);
+    memmove(str3 + 2, str3, 5);
+    printf("Después de memmove: %s\n\n", str3);
+
+    //Copia sin solapamiento con cadenas diferentes
+    char str4[20] = "Goodbye";
+    printf("Antes de memmove (sin solapamiento): %s\n", str4);
+    memmove(str4 + 8, str4, 7);
+    printf("Después de memmove: %s\n\n", str4);
+
+    return 0;
+}

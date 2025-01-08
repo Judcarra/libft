@@ -8,7 +8,7 @@ SRCS_DIR = .
 INCLUDES_DIR = .
 
 # Archivos fuente que contienen las funciones
-SRCS = $(SRCS_DIR)/ft_isalnum.c $(SRCS_DIR)/ft_isalpha.c $(SRCS_DIR)/ft_isdigit.c $(SRCS_DIR)/ft_isascii.c $(SRCS_DIR)/ft_isprint.c $(SRCS_DIR)/ft_strlen.c $(SRCS_DIR)/ft_memset.c $(SRCS_DIR)/ft_bzero.c $(SRCS_DIR)/ft_memcpy.c
+SRCS = $(SRCS_DIR)/ft_isalnum.c $(SRCS_DIR)/ft_isalpha.c $(SRCS_DIR)/ft_isdigit.c $(SRCS_DIR)/ft_isascii.c $(SRCS_DIR)/ft_isprint.c $(SRCS_DIR)/ft_strlen.c $(SRCS_DIR)/ft_memset.c $(SRCS_DIR)/ft_bzero.c $(SRCS_DIR)/ft_memcpy.c $(SRCS_DIR)/ft_memmove.c
 
 # Archivos objeto generados a partir de los archivos fuente (.c)
 OBJS = $(SRCS:.c=.o)
