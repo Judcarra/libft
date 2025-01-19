@@ -1,7 +1,6 @@
 //comprueba si un caracter es imprimible (los que no son de control)
 //devuelve 1 si es imprimible (0 si no lo es)
 
-#include <stdio.h>
 #include "libft.h"
 
 int ft_isprint(int c)

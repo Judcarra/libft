@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include "libft.h"
 
-void *ft_memset(void *dest, int c, size_t count)
+void    *ft_memset(void *dest, int c, size_t count)
 {
     unsigned char *ptr = dest;
     size_t i = 0;

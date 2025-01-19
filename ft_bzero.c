@@ -1,8 +1,10 @@
 #include <string.h>
 
-void ft_bzero(void *s, size_t count)
+void    ft_bzero(void *s, size_t count)
 {
-    unsigned char *ptr = s;
+    unsigned char *ptr;
+    ptr = s;
+    
     while(count--)
     {
         *ptr = 0;
