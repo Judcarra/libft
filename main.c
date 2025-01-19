@@ -135,17 +135,32 @@
 //    return (0);
 //}
 
-int main()
-{
-    const char *str = "hola mundo";
-    char c = 'd';
-    char *result = ft_strchr(str, c);
+//int main()
+//{
+//    const char *str = "gato guapo";
+//    char c = 'u';
+//    char *result = ft_strchr(str, c);
+//
+//    if (result){
+//        printf("caracter '%c' encontrado en %ld\n", c, result - str); //str es la direccion donde empieza la cadena y result la direccion donde esta c. Si se restan, en C, se nos dice la direccion exacta de c en el indice de la cadena  
+//    }
+//    else{
+//        printf("caracter '%c' no encontrado", c);
+//    }
+//    return (0);
+//}
 
-    if (result){
-        printf("caracter '%c' encontrado en %ld\n", c, result - str); //str es la direccion donde empieza la cadena y result la direccion donde esta c. Si se restan, en C, se nos dice la direccion exacta de c en el indice de la cadena  
-    }
-    else{
-        printf("caracter '%c' no encontrado", c);
-    }
-    return (0);
-}
+//int main()
+//{
+//    char *str = "gato guapo";
+//    char c = 'g';
+//    char *result = ft_strrchr(str, c);
+//
+//    if (result){
+//        printf("caracter '%c' encontrado en %ld\n", c, result - str); //str es la direccion donde empieza la cadena y result la direccion donde esta c. Si se restan, en C, se nos dice la direccion exacta de c en el indice de la cadena  
+//    }
+//    else{
+//        printf("caracter '%c' no encontrado", c);
+//    }
+//    return (0);
+//}

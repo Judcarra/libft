@@ -1,4 +1,5 @@
 #include <stddef.h>
+#include <stdio.h>
 
 size_t  ft_strlcat(char *dest, const char *src, size_t destsize)
 {
@@ -14,7 +15,7 @@ size_t  ft_strlcat(char *dest, const char *src, size_t destsize)
         srclen++;
 
     if (destsize < srclen + destlen){
-        return destlen + srclen;
+        return (destlen + srclen);
     }
 
     size_t i = 0;
@@ -26,5 +27,5 @@ size_t  ft_strlcat(char *dest, const char *src, size_t destsize)
 
     dest[destlen + i] = '\0';
 
-    return destlen + srclen;
+    return (destlen + srclen);
 }
