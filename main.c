@@ -164,3 +164,13 @@
 //    }
 //    return (0);
 //}
+
+//int main()
+//{
+//    char *str1 = "abcdef";
+//    char *str2 = "abcd";
+//    int result = ft_strncmp(str1, str2, 4);
+//
+//    printf("%i", result);
+//    return (0); 
+//}

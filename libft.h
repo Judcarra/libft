@@ -18,5 +18,6 @@ int ft_toupper(int ch);
 int ft_tolower(int ch);
 char    *ft_strchr(const char *str, int c);
 char    *ft_strrchr(const char *str, int c);
+int ft_strncmp(char *s1, char *s2, size_t n);
 
 #endif

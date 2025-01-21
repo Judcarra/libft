@@ -1,5 +1,6 @@
 #include <string.h>
 #include <stddef.h>
+#include <stdio.h>
 
 char    *ft_strrchr(char *str, int c)
 {
