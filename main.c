@@ -174,3 +174,44 @@
 //    printf("%i", result);
 //    return (0); 
 //}
+
+//int main()
+//{
+//    char *buf = "compartimento";
+//    int c = 'n';
+//    char *result = ft_memchr(buf, c, 12);
+//
+//    if(result){
+//        printf("caracter '%c' encontrado en %ld\n", c, result - buf);
+//    }
+//    else{
+//        printf("caracter '%c' no exsite", c, result);
+//    }
+//    return (0);
+//}
+
+//int main()
+//{
+//    char *buf1 = "hola buenas";
+//    char *buf2 = "hola guenas";
+//    int result = ft_memcmp(buf1, buf2, 9);
+//
+//    printf("%i", result);
+//    return (0);
+//}
+
+int main()
+{
+    const char *s1 = "hola buenas tardes";
+    const char *s2 = "tardes";
+    char *result = ft_strnstr(s1, s2, 19);
+
+    if (result)
+    {
+        printf("%s\n", result);
+    }
+    else{
+        printf("not found\n");
+    }
+    return (0);
+}
