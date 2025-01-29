@@ -22,5 +22,6 @@ int ft_strncmp(char *s1, char *s2, size_t n);
 void    *ft_memchr(void *buf, int c, size_t count);
 int    ft_memcmp(void *buf1, void *buf2, size_t count);
 char *ft_strnstr(const char *s1, const char *s2, size_t n);
+int ft_atoi(const char *str);
 
 #endif

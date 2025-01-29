@@ -2,7 +2,6 @@
 //devuelve un puntero a dest
 
 #include <stddef.h>
-#include "libft.h"
 
 void    *ft_memset(void *dest, int c, size_t count)
 {

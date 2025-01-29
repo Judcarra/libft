@@ -200,18 +200,27 @@
 //    return (0);
 //}
 
-int main()
-{
-    const char *s1 = "hola buenas tardes";
-    const char *s2 = "tardes";
-    char *result = ft_strnstr(s1, s2, 19);
+//int main()
+//{
+//    const char *s1 = "hola buenas tardes";
+//    const char *s2 = "tardes";
+//    char *result = ft_strnstr(s1, s2, 19);
+//
+//    if (result)
+//    {
+//        printf("%s\n", result);
+//    }
+//    else{
+//        printf("not found\n");
+//    }
+//    return (0);
+//}
 
-    if (result)
-    {
-        printf("%s\n", result);
-    }
-    else{
-        printf("not found\n");
-    }
-    return (0);
-}
+//int main()
+//{
+//    const char *str = "  1264722973";
+//    int result = ft_atoi(str);
+//
+//    printf("result: %i\n", result);
+//    return (0);
+//}

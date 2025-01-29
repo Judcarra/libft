@@ -1,6 +1,4 @@
-#include <string.h>
 #include <stddef.h>
-#include <stdio.h>
 
 void    *ft_memchr(void *buf, int c, size_t count)
 {

@@ -1,5 +1,3 @@
-#include <ctype.h>
-
 int   ft_tolower(int ch)
 {
    if (ch >= 'A' && ch <= 'Z')

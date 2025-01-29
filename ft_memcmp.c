@@ -1,6 +1,5 @@
 #include <string.h>
 #include <stddef.h>
-#include <stdio.h>
 
 int    ft_memcmp(void *buf1, void *buf2, size_t count)
 {
