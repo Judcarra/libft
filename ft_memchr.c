@@ -1,11 +1,12 @@
 #include <stddef.h>
 
-void    *ft_memchr(void *buf, int c, size_t count)
+void    *ft_memchr(void *buf, int val, size_t count)
 {
-    unsigned char *bff = buf;
+    unsigned char *bff = (unsigned char *) buf;
+    unsigned char c = (unsigned char)val;
     size_t i = 0;
     
-    while (bff[i] != '\0' && i < count)
+    while (i < count)
     {
         if (bff[i] == c)
         {

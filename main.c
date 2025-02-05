@@ -1,11 +1,13 @@
 #include "libft.h"
 #include <stdio.h>
 #include <stddef.h>
+#include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 // int main()
 //{
-//     char c = '\0';
+//     char c = '+';
 //     int res = ft_isascii(c);
 //
 //     printf("%i", res);
@@ -21,7 +23,7 @@
 //     return (0);
 // }
 
-// int	main(void)
+//int	main(void)
 //{
 //	char	*str;
 //	int		count;
@@ -30,7 +32,7 @@
 //	count = ft_strlen(str);
 //	printf("%d", count);
 //	return (0);
-// }
+//}
 
 // int main()
 //{
@@ -108,9 +110,10 @@
 // }
 
 // int main(){
-//     char dest[11] = "hola";
-//     char src[] = "buenas";
-//     size_t result = ft_strlcat(dest, src, sizeof(dest));
+//     char dest[30]; memset(dest, 0, 30);
+//	 char *src = (char *)" buenas";
+//	 strcpy(dest, "hola");
+//     size_t result = ft_strlcat(dest, src, 9);
 //
 //     printf("result: %zu\n", result);
 //
@@ -167,9 +170,9 @@
 
 //int main()
 //{
-//    char *str1 = "abcdef";
-//    char *str2 = "abcd";
-//    int result = ft_strncmp(str1, str2, 4);
+//    char str1[20] = "abcda";
+//    char str2[20] = "abcdX";
+//    int result = ft_strncmp(str1, str2, 42);
 //
 //    printf("%i", result);
 //    return (0); 
@@ -216,11 +219,79 @@
 //    return (0);
 //}
 
+int main()
+{
+    const char *str = "\t\n\v\f\r1";
+    int result = ft_atoi(str);
+
+    printf("result: %i\n", result);
+    return (0);
+}
+
+//int main() 
+//{
+//    int *arr = (int*) ft_calloc(5, sizeof(int));
+//
+//    if (arr == NULL) {
+//        printf("Error: No se pudo asignar memoria.\n");
+//        return 1;
+//    }
+//
+//    int i = 0;
+//    while (i < 5) {
+//        printf("%d ", arr[i]);
+//        i++;
+//    }
+//
+//    free(arr);
+//    return 0;
+//}
+
 //int main()
 //{
-//    const char *str = "  1264722973";
-//    int result = ft_atoi(str);
+//    char str[] = "hello world";
+//    char *copy = ft_strdup(str);
 //
-//    printf("result: %i\n", result);
+//    if (copy == NULL) {
+//        perror("Failed to allocate memory");
+//        return 1;
+//    }
+//
+//    printf("Original: %s\n", str);
+//    printf("Duplicate: %s\n", copy);
+//
+//    free(copy);
+//    return 0;
+//}
+
+//int main()
+//{
+//    char  *str = "holass";
+//    char *dest = ft_substr(str, 1, 8);
+//
+//    printf("%s\n", dest);
+//    free(dest);
+//    return (0);
+//}
+
+//int main()
+//{
+//    char *str1 = "hola ";
+//    char *str2 = "mundo";
+//    char *new_str = ft_strjoin(str1, str2);
+//
+//    printf("%s\n", new_str);
+//    free(new_str);
+//    return (0);
+//}
+
+//int main()
+//{
+//    char *str1 = " hola buenas  ";
+//    char *set = " ";
+//    char *new_str = ft_strtrim(str1, set);
+//
+//    printf("'%s'\n", new_str);
+//    free(new_str);
 //    return (0);
 //}

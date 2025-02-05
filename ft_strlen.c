@@ -1,12 +1,12 @@
-int ft_strlen(char *str)
-{
-    int i = 0;
-    int len = 0;
+#include <stddef.h>
 
-    while(str[i] != '\0')
+size_t ft_strlen(const char *str)
+{
+    size_t length = 0;
+
+    while(str[length] != '\0')
     {
-        len++;
-        i++;
+        length++;
     }
-    return (len);
+    return (length);
 }
