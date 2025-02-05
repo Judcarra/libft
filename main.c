@@ -219,33 +219,33 @@
 //    return (0);
 //}
 
-int main()
-{
-    const char *str = "\t\n\v\f\r1";
-    int result = ft_atoi(str);
-
-    printf("result: %i\n", result);
-    return (0);
-}
-
-//int main() 
+//int main()
 //{
-//    int *arr = (int*) ft_calloc(5, sizeof(int));
+//    const char *str = "         -655871";
+//    int result = ft_atoi(str);
 //
-//    if (arr == NULL) {
-//        printf("Error: No se pudo asignar memoria.\n");
-//        return 1;
-//    }
-//
-//    int i = 0;
-//    while (i < 5) {
-//        printf("%d ", arr[i]);
-//        i++;
-//    }
-//
-//    free(arr);
-//    return 0;
+//    printf("result: %i\n", result);
+//    return (0);
 //}
+
+int main() 
+{
+    int *arr = (int*) ft_calloc(7, sizeof(int));
+
+    if (arr == NULL) {
+        printf("Error: No se pudo asignar memoria.\n");
+        return 1;
+    }
+
+    int i = 0;
+    while (i < 5) {
+        printf("%d ", arr[i]);
+        i++;
+    }
+
+    free(arr);
+    return 0;
+}
 
 //int main()
 //{
