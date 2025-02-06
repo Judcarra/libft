@@ -6,7 +6,7 @@
 
 void    *ft_calloc(size_t num, size_t size)
 {
-    if(num == 0 || size == 0 || num > SIZE_MAX / size)
+    if(num > SIZE_MAX / size)
         return (NULL);
 
     size_t totalsize;
@@ -18,7 +18,7 @@ void    *ft_calloc(size_t num, size_t size)
     if(ptr == NULL)
         return (NULL);
 
-    memset(ptr, 0, totalsize);
+    ft_memset(ptr, 0, totalsize);
 
     return (ptr);
 }

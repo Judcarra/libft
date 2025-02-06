@@ -228,24 +228,24 @@
 //    return (0);
 //}
 
-int main() 
-{
-    int *arr = (int*) ft_calloc(7, sizeof(int));
-
-    if (arr == NULL) {
-        printf("Error: No se pudo asignar memoria.\n");
-        return 1;
-    }
-
-    int i = 0;
-    while (i < 5) {
-        printf("%d ", arr[i]);
-        i++;
-    }
-
-    free(arr);
-    return 0;
-}
+//int main() 
+//{
+//    int *arr = (int*) ft_calloc(7, sizeof(int));
+//
+//    if (arr == NULL) {
+//        printf("Error: No se pudo asignar memoria.\n");
+//        return 1;
+//    }
+//
+//    int i = 0;
+//    while (i < 5) {
+//        printf("%d ", arr[i]);
+//        i++;
+//    }
+//
+//    free(arr);
+//    return 0;
+//}
 
 //int main()
 //{
@@ -264,15 +264,15 @@ int main()
 //    return 0;
 //}
 
-//int main()
-//{
-//    char  *str = "holass";
-//    char *dest = ft_substr(str, 1, 8);
-//
-//    printf("%s\n", dest);
-//    free(dest);
-//    return (0);
-//}
+int main()
+{
+    char  *str = "0123456789";
+    char *dest = ft_substr(str, 9, 10);
+
+    printf("%s\n", dest);
+    free(dest);
+    return (0);
+}
 
 //int main()
 //{
