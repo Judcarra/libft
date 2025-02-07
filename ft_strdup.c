@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: judcarra <judcarra@student.42barcelona.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/07 05:30:04 by judcarra          #+#    #+#             */
+/*   Updated: 2025/02/07 05:30:05 by judcarra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // Descripcion: Reserva (con malloc(3)) y devuelve una substring de la string ’s’. La substring empieza desde el índice ’start’ y tiene una longitud máxima ’len’.
 #include <string.h>
 #include <stdlib.h>

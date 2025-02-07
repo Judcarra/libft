@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: judcarra <judcarra@student.42barcelona.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/07 05:30:08 by judcarra          #+#    #+#             */
+/*   Updated: 2025/02/07 05:30:09 by judcarra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // Descripcion: Reserva (con malloc(3)) y devuelve una nueva string, formada por la concatenación de ’s1’ y ’s2’.
 #include <stddef.h>
 #include <stdlib.h>

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: judcarra <judcarra@student.42barcelona.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/07 05:30:23 by judcarra          #+#    #+#             */
+/*   Updated: 2025/02/07 05:30:25 by judcarra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 //copia y concatena strings. 
 //The strlcpy() function copies up to size - 1 characters from the NUL-terminated string src to dst, NUL-terminating the result. 
 //strlcpy take the full size of the buffer (not just the length) and guarantee to NUL-terminate the result (as long as size is larger than 0
