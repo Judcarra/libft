@@ -298,7 +298,7 @@
 
 
 int main(){
-    char *str = "Hola,buenas,tardes, quetal";
+    char *str = ",,Hola,,buenas,tardes,,quetal,,";
     char delimitador = ',';
 
     char **words = ft_split(str, delimitador);

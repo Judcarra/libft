@@ -6,7 +6,7 @@
 /*   By: judcarra <judcarra@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 05:29:53 by judcarra          #+#    #+#             */
-/*   Updated: 2025/02/07 05:29:54 by judcarra         ###   ########.fr       */
+/*   Updated: 2025/02/07 16:40:23 by judcarra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static char *copyWord(const char *start, int len)
 
     int i;
     i = 0;
-    while (i <= len)
+    while (i < len)
     {
         word[i] = *start;
         i++;
@@ -70,23 +70,24 @@ static void freeWords(char **words, int i)
 
 static char *getWord(const char *str, char c, int *is)
 {
+    int nseparator = 0;
     while (*str == c)
     {
-        str++;
-        continue;
-    }
-    const char *start;
-    start = str;
-    while (*str != c && str){
+        nseparator++;
         str++;
     }
-    char *word;
-    word = copyWord(start, str - start);
+
+    const char *start = str;
+    while (*str != c && *str != '\0')
+        str++;
+
+    int nword = str - start;
+
+    char *word = copyWord(start, nword);
     if (!word)
-    {
         return NULL;
-    }
-    *is = str - start +1;
+
+    *is = nword + nseparator;
     return word;
 }
 
@@ -95,22 +96,23 @@ static char **getWordList(char **words, int nwords, const char *s, char c)
     int i;
     i = 0;
     int is = 0;
+
     while (i < nwords)
     {
         char *word = getWord(s, c, &is);
-        printf("%s", word);
         if (!word)
         {
             freeWords(words, i);
             return NULL;
         }
         words[i] = word;
-        s+= is;
+        s += is;
         i++;
     }
     words[i] = NULL;
     return words;
 }
+
 
 char **ft_split(char const *s, char c)
 {
