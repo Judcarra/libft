@@ -264,15 +264,15 @@
 //    return 0;
 //}
 
-int main()
-{
-    char  *str = "0123456789";
-    char *dest = ft_substr(str, 9, 10);
-
-    printf("%s\n", dest);
-    free(dest);
-    return (0);
-}
+//int main()
+//{
+//    char  *str = "0123456789";
+//    char *dest = ft_substr(str, 9, 10);
+//
+//    printf("%s\n", dest);
+//    free(dest);
+//    return (0);
+//}
 
 //int main()
 //{
@@ -295,3 +295,23 @@ int main()
 //    free(new_str);
 //    return (0);
 //}
+
+
+int main(){
+    char *str = "Hola,buenas,tardes, quetal";
+    char delimitador = ',';
+
+    char **words = ft_split(str, delimitador);
+    int i = 0;
+    printf("\n");
+    while (words[i] != NULL){
+        int j = 0;
+        while(words[i][j] != '\0'){
+            printf("%c", words[i][j]);
+            j++;
+        }
+        printf("\n");
+        i++;
+    }
+    return 0;
+}
