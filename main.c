@@ -379,3 +379,31 @@
 //    close(fd);
 //    return (0);
 //}
+
+//int main()
+//{
+//    char *str = "buenos dias";
+//    int fd = open("putend_file.txt", O_WRONLY | O_CREAT, 0644);
+//
+//    if (fd < 0)
+//    {
+//        perror("Error al abrir el archivo");
+//        return (1);
+//    }        
+//    ft_putendl_fd(str, fd);
+//    close(fd);
+//    return (0);
+//}
+
+int main(){
+    int nb = 48;
+    int fd  = open("nbr_file.txt", O_WRONLY | O_CREAT, 0644);
+    if (fd < 0)
+    {
+        printf("error al abrir el archivo");
+        return (1);
+    }
+    ft_putnbr_fd(nb, fd);
+    return 0;
+    
+}

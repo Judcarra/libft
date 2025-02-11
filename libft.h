@@ -6,7 +6,7 @@
 /*   By: judcarra <judcarra@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 05:32:53 by judcarra          #+#    #+#             */
-/*   Updated: 2025/02/10 15:44:40 by judcarra         ###   ########.fr       */
+/*   Updated: 2025/02/11 09:50:36 by judcarra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <ctype.h>
 #ifndef LIBFT_H
 #define LIBFT_H
+
+//BORRAR TOUPPER_ADAPT!!!!!!!!!!!!!!!!!!!!!1
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
@@ -48,5 +50,7 @@ void toupper_adapt(unsigned int i, char *c);
 void    ft_striteri(char *s, void (*f)(unsigned int, char*));
 void    ft_putchar_fd(char c, int fd);
 void    ft_putstr_fd(char *s, int fd);
+void    ft_putendl_fd(char *s, int fd);
+void    ft_putnbr_fd(int nb, int fd);
 
 #endif
