@@ -322,7 +322,7 @@
 //    char *str;
 //    str = ft_itoa(n);
 //    int i = 0;
-//    while(str[i] != '\0'){
+//    while(i < 1000){
 //        printf("%c", str[i]);
 //        i++;
 //    }
@@ -395,15 +395,15 @@
 //    return (0);
 //}
 
-int main(){
-    int nb = 48;
-    int fd  = open("nbr_file.txt", O_WRONLY | O_CREAT, 0644);
-    if (fd < 0)
-    {
-        printf("error al abrir el archivo");
-        return (1);
-    }
-    ft_putnbr_fd(nb, fd);
-    return 0;
-    
-}
+//int main(){
+//    int nb = 48;
+//    int fd  = open("nbr_file.txt", O_WRONLY | O_CREAT, 0644);
+//    if (fd < 0)
+//    {
+//        printf("error al abrir el archivo");
+//        return (1);
+//    }
+//    ft_putnbr_fd(nb, fd);
+//    return 0;
+//    
+//}

@@ -5,83 +5,81 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: judcarra <judcarra@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/07 05:28:17 by judcarra          #+#    #+#             */
-/*   Updated: 2025/02/10 04:37:28 by judcarra         ###   ########.fr       */
+/*   Created: 2025/02/11 12:41:59 by judcarra          #+#    #+#             */
+/*   Updated: 2025/02/11 12:42:00 by judcarra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
-#include <stddef.h>
-#include <stdio.h>
 
-    // dividir 10
-    //n = char(n)+48
-static int countDigits(int num)
+static int ft_num_len(int n)
 {
-    if (num == 0)
-        return (1);
-
-    int count;
-    count = 0;
-    while (num >= 1)
+    long nb;
+    int len;
+    nb = n;
+    len = (nb <= 0) ? 1 : 0;
+    while (nb != 0)
     {
-        count++;
-        num /= 10;
+        nb /= 10;
+        len++;
     }
-    return count;
+    return len;
 }
 
-static char *convertToStr(int n, int space, char *str)
+static void ft_fill_str(char *str, long nb, int len, int sign)
 {
-    if (n == 0) {
-        str[0] = '0';
-        str[1] = '\0';
-        return str;
-    }
-    int nDigits;
-    nDigits = countDigits(n);
-    
-    int i = nDigits - space;
-    while (n >= 1)
+    if (sign == -1)
     {
-        int digit;
-        digit = n % 10;
-        char charDigit = (char) digit + 48;
-        str[i] = charDigit;
-        i--;
-        n /= 10;
+        str[0] = '-';
     }
+    while (nb > 0)
+    {
+        str[--len] = (nb % 10) + '0';
+        nb /= 10;
+    }
+}
+
+static char *ft_handle_zero(void)
+{
+    char *str;
+    str = (char *)malloc(2 * sizeof(char));
+    if (str == NULL)
+        return NULL;
+    str[0] = '0';
+    str[1] = '\0';
     return str;
 }
 
-char    *ft_itoa(int n)
+static char *ft_allocate_str(int len)
 {
-    if (n == 0)
-        return (0);
-
-     if (n == 0) 
-    {
-        char *str = (char *)malloc(2 * sizeof(char)); // 2: '0' + '\0'
-        if (!str) return NULL;
-        str[0] = '0';
-        str[1] = '\0';
-        return str;
-    }
-    
     char *str;
-    str = (char *)malloc(21 * sizeof(char)); //19 es el maximo de digitos que puede tener un int en arquitectura de 64bits, 2 extra para negativo y para \0
-    if (!str)
+    str = (char *)malloc((len + 1) * sizeof(char));
+    if (str == NULL)
         return NULL;
-        
-    int space;
-    space = 1;
-    if(n < 0){
-        space = 0;
-        *str = '-';
-        n = -n;
-    }
-    
-    return convertToStr(n, space, str);
+    return str;
 }
 
+char *ft_itoa(int n)
+{
+    char *str;
+    int len;
+    int sign;
+    long nb;
+
+    if (n == 0)
+        return ft_handle_zero();
+
+    sign = (n < 0) ? -1 : 1;
+    len = ft_num_len(n);
+    str = ft_allocate_str(len);
+    if (str == NULL)
+        return NULL;
+
+    nb = n;
+    if (nb < 0)
+        nb = -nb;
+
+    str[len] = '\0';
+    ft_fill_str(str, nb, len, sign);
+    return str;
+}
