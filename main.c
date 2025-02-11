@@ -4,6 +4,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <fcntl.h>
 
 // int main()
 //{
@@ -297,21 +298,84 @@
 //}
 
 
-int main(){
-    char *str = ",,Hola,,buenas,tardes,,quetal,,";
-    char delimitador = ',';
+//int main(){
+//    char *str = ",,Hola,,buenas,tardes,,quetal,,";
+//    char delimitador = ',';
+//
+//    char **words = ft_split(str, delimitador);
+//    int i = 0;
+//    printf("\n");
+//    while (words[i] != NULL){
+//        int j = 0;
+//        while(words[i][j] != '\0'){
+//            printf("%c", words[i][j]);
+//            j++;
+//        }
+//        printf("\n");
+//        i++;
+//    }
+//    return 0;
+//}
 
-    char **words = ft_split(str, delimitador);
-    int i = 0;
-    printf("\n");
-    while (words[i] != NULL){
-        int j = 0;
-        while(words[i][j] != '\0'){
-            printf("%c", words[i][j]);
-            j++;
-        }
-        printf("\n");
-        i++;
-    }
-    return 0;
-}
+//int main(){
+//    int n = -12345;
+//    char *str;
+//    str = ft_itoa(n);
+//    int i = 0;
+//    while(str[i] != '\0'){
+//        printf("%c", str[i]);
+//        i++;
+//    }
+//    return 0;
+//}
+
+//int main()
+//{
+//    char const *str = "hola mundo";
+//    char ch = 'm';
+//    unsigned int i = 2;
+//    char *new_str = ft_strmapi(str, toupper_adapt);
+//
+//    if (new_str){
+//        printf("%s\n", new_str);
+//        free(new_str);
+//    }
+//    return (0);
+//}
+
+//int main()
+//{
+//    char str[] = "hola buenas";
+//
+//    ft_striteri(str, toupper_adapt);
+//    printf("%s\n ", str);
+//    return (0);
+//}
+
+//int main(){
+//    int fd = open("archivo_nuevo.txt", O_WRONLY | O_CREAT, 0644);
+//    
+//    if (fd < 0)
+//    {
+//        perror("Error al abrir o crear el archivo");
+//        return (1);
+//    }
+//    ft_putchar_fd('A', fd);
+//    close(fd);
+//    return (0);
+//}
+
+//int main(){
+//    int fd = open("new_file.txt", O_WRONLY | O_CREAT, 0644);
+//    char *str1 = "hola buenas";
+//    if (fd < 0)
+//    {
+//        perror("Error al abrir o crear el archivo");
+//        return (1);
+//    }
+//
+//    ft_putstr_fd(str1, fd);
+//    ft_putstr_fd("\n", fd);
+//    close(fd);
+//    return (0);
+//}
