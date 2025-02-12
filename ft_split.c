@@ -15,120 +15,119 @@
 #include <stdio.h>
 #include "libft.h"
 
-static char *copyWord(const char *start, int len)
+static char	*copy_word(const char *start, int len)
 {
-    char *word = (char*)malloc((len + 1) * sizeof(char));
+	char	*word;
+	int		i;
 
-    if (!word)
-        return NULL;
-
-    int i;
-    i = 0;
-    while (i < len)
-    {
-        word[i] = *start;
-        i++;
-        start++;
-    }
-    word[i] = '\0';
-
-    return word;
+	*word = (char *)malloc((len + 1) * sizeof(char));
+	if (!word)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		word[i] = *start;
+		i++;
+		start++;
+	}
+	word[i] = '\0';
+	return (word);
 }
 
-static int countWords(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
-    int count;
-    int inWord;
+	int	count;
+	int	in_word;
 
-    inWord = 0;
-    count = 0;
-
-    while (*s)
-    {
-        if (*s != c && !inWord)
-        {
-            count++;
-            inWord = 1;
-        }
-        else if (*s == c)
-            inWord = 0;
-
-        s++;
-    }
-    return count;
+	inWord = 0;
+	count = 0;
+	while (*s)
+	{
+		if (*s != c && !in_word)
+		{
+			count++;
+			in_word = 1;
+		}
+		else if (*s == c)
+			in_word = 0;
+		s++;
+	}
+	return (count);
 }
 
-static void freeWords(char **words, int i)
+static void	free_words(char **words, int i)
 {
-    while (i > 0)
-    {
-        free(words[i]);
-        i--;
-    }
-    free(words);
+	while (i > 0)
+	{
+		free(words[i]);
+		i--;
+	}
+	free(words);
 }
 
-static char *getWord(const char *str, char c, int *is)
+static char	*get_word(const char *str, char c, int *is)
 {
-    int nseparator = 0;
-    while (*str == c)
-    {
-        nseparator++;
-        str++;
-    }
+	int			nseparator;
+	const char	*start;
+	int			nword;
+	char		*word;
 
-    const char *start = str;
-    while (*str != c && *str != '\0')
-        str++;
-
-    int nword = str - start;
-
-    char *word = copyWord(start, nword);
-    if (!word)
-        return NULL;
-
-    *is = nword + nseparator;
-    return word;
+	nseparator = 0;
+	while (*str == c)
+	{
+		nseparator++;
+		str++;
+	}
+	*start = str;
+	while (*str != c && *str != '\0')
+		str++;
+	nword = str - start;
+	*word = copy_word(start, nword);
+	if (!word)
+		return (NULL);
+	*is = nword + nseparator;
+	return (word);
 }
 
-static char **getWordList(char **words, int nwords, const char *s, char c)
+static char	**get_word_list(char **words, int nwords, const char *s, char c)
 {
-    int i;
-    i = 0;
-    int is = 0;
+	int		i;
+	int		is;
+	char	*word;
 
-    while (i < nwords)
-    {
-        char *word = getWord(s, c, &is);
-        if (!word)
-        {
-            freeWords(words, i);
-            return NULL;
-        }
-        words[i] = word;
-        s += is;
-        i++;
-    }
-    words[i] = NULL;
-    return words;
+	i = 0;
+	is = 0;
+	while (i < nwords)
+	{
+		*word = get_word(s, c, &is);
+		if (!word)
+		{
+			free_words(words, i);
+			return (NULL);
+		}
+		words[i] = word;
+		s += is;
+		i++;
+	}
+	words[i] = NULL;
+	return (words);
 }
 
-
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-    if (!s)
-        return NULL;
+	int		nwords;
+	char	**words;
 
-    int nwords = countWords(s, c);
-    char **words = (char **)malloc((nwords + 1) * sizeof(char *));
-    if (!words)
-        return NULL;
-
-    words = getWordList(words, nwords,  s, c);
-    if (!words)
-    {
-        return NULL;
-    }
-
-    return words;
+	if (!s)
+		return (NULL);
+	nwords = count_words(s, c);
+	**words = (char **)malloc((nwords + 1) * sizeof(char *));
+	if (!words)
+		return (NULL);
+	words = get_word_list(words, nwords, s, c);
+	if (!words)
+	{
+		return (NULL);
+	}
+	return (words);
 }

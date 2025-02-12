@@ -15,24 +15,16 @@
 #include "libft.h"
 #include <ctype.h>
 
-//void toupper_adapt(unsigned int i, char *c)
-//{
-//    (void)i;
-//    if (*c >= 'a' && *c <= 'z')
-//        *c -= 32;
-//}
-
-void    ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    if (!s || !f)
-        return;
+	int	i;
 
-    int i;
-
-    i = 0;
-    while (s[i])
-    {
-        f(i, &s[i]);
-        i++;
-    }
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

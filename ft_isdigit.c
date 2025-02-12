@@ -6,18 +6,14 @@
 /*   By: judcarra <judcarra@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 05:29:05 by judcarra          #+#    #+#             */
-/*   Updated: 2025/02/07 05:29:06 by judcarra         ###   ########.fr       */
+/*   Updated: 2025/02/12 12:19:11 by judcarra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if(c >= '0' && c <= '9')
-    {
-        return (1);
-    }
-    else{
-        return (0);
-    }
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }

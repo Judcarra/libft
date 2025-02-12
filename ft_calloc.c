@@ -6,7 +6,7 @@
 /*   By: judcarra <judcarra@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 05:28:33 by judcarra          #+#    #+#             */
-/*   Updated: 2025/02/07 05:28:34 by judcarra         ###   ########.fr       */
+/*   Updated: 2025/02/12 12:11:14 by judcarra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,17 @@
 #include <stdint.h>
 #include <string.h>
 
-void    *ft_calloc(size_t num, size_t size)
+void	*ft_calloc(size_t num, size_t size)
 {
-    if(num > SIZE_MAX / size)
-        return (NULL);
+	size_t	totalsize;
+	void	*ptr;
 
-    size_t totalsize;
-    void *ptr;
-
-    totalsize = num * size;
-    ptr = malloc(totalsize);
-
-    if(ptr == NULL)
-        return (NULL);
-
-    ft_memset(ptr, 0, totalsize);
-
-    return (ptr);
+	if (num > SIZE_MAX / size)
+		return (NULL);
+	totalsize = num * size;
+	ptr = malloc(totalsize);
+	if (ptr == NULL)
+		return (NULL);
+	ft_memset(ptr, 0, totalsize);
+	return (ptr);
 }

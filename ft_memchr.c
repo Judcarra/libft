@@ -12,20 +12,20 @@
 
 #include <stddef.h>
 
-void    *ft_memchr(void *buf, int val, size_t count)
+void	*ft_memchr(void *buf, int val, size_t count)
 {
-    unsigned char *bff = (unsigned char *) buf;
-    unsigned char c = (unsigned char)val;
-    size_t i = 0;
-    
-    while (i < count)
-    {
-        if (bff[i] == c)
-        {
-            return (&bff[i]);
-        }
-        i++;
-    }
-    
-    return (NULL);
+	unsigned char	*bff;
+	unsigned char	c;
+	size_t			i;
+
+	i = 0;
+	*bff = (unsigned char *) buf;
+	c = (unsigned char)val;
+	while (i < count)
+	{
+		if (bff[i] == c)
+			return (&bff[i]);
+		i++;
+	}
+	return (NULL);
 }
